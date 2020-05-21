@@ -1,0 +1,846 @@
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200507_135922-10wt7i0h
+wandb: Syncing run avid-night-328
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/10wt7i0h
+wandb: Run `wandb off` to turn off syncing.
+
+/tmp/pycharm_project_809/src/networks/base_model.py:72: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(m.bias.data, 0.0)
+
+wandb: Waiting for W&B process to finish, PID 9101
+Traceback (most recent call last):
+  File "train.py", line 25, in <module>
+    model.init_trainer_network()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v8.py", line 322, in init_trainer_network
+    alpha=self.cfg.langa_alpha, weight_decay=self.cfg.lang_wd)
+AttributeError: 'Namespace' object has no attribute 'langa_alpha'
+wandb: Program failed with code 1. Press ctrl-c to abort syncing.
+wandb: Process crashed early, not syncing files
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200507_140025-3b30x852
+wandb: Syncing run cerulean-voice-329
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/3b30x852
+wandb: Run `wandb off` to turn off syncing.
+
+/tmp/pycharm_project_809/src/networks/base_model.py:72: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(m.bias.data, 0.0)
+
+wandb: Waiting for W&B process to finish, PID 10071
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    model.optimize()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v8.py", line 290, in optimize
+    self.backward_discriminator()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v8.py", line 226, in backward_discriminator
+    loss.backward()
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/tensor.py", line 198, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/autograd/__init__.py", line 100, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+RuntimeError: Trying to backward through the graph a second time, but the buffers have already been freed. Specify retain_graph=True when calling backward the first time.
+wandb: Program failed with code 1. Press ctrl-c to abort syncing.
+wandb: Process crashed early, not syncing files
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: ERROR W&B process failed to launch, see: wandb/debug.log
+Traceback (most recent call last):
+  File "train.py", line 12, in <module>
+    wandb.init(config=cfg, project="image-synthesis")
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/wandb/__init__.py", line 1107, in init
+    _init_headless(run)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/wandb/__init__.py", line 306, in _init_headless
+    "W&B process failed to launch, see: {}".format(path))
+wandb.run_manager.LaunchError: W&B process failed to launch, see: wandb/debug.log
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200507_140146-242k81fz
+wandb: Syncing run soft-fog-330
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/242k81fz
+wandb: Run `wandb off` to turn off syncing.
+
+/tmp/pycharm_project_809/src/networks/base_model.py:72: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(m.bias.data, 0.0)
+
+wandb: Waiting for W&B process to finish, PID 11522
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    model.optimize()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v8.py", line 293, in optimize
+    nn.utils.clip_grad_norm_(self.language_model.parameters(), max_norm=1000.)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/utils/clip_grad.py", line 30, in clip_grad_norm_
+    total_norm = torch.norm(torch.stack([torch.norm(p.grad.detach(), norm_type) for p in parameters]), norm_type)
+RuntimeError: stack expects a non-empty TensorList
+wandb: Program failed with code 1. Press ctrl-c to abort syncing.
+wandb: Process crashed early, not syncing files
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200507_140344-90m4zgv9
+wandb: Syncing run avid-water-331
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/90m4zgv9
+wandb: Run `wandb off` to turn off syncing.
+
+wandb: Ctrl-c pressed.
+wandb: Program failed with code 255. Press ctrl-c to abort syncing.
+/tmp/pycharm_project_809/src/networks/base_model.py:72: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(m.bias.data, 0.0)
+
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    model.optimize()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v8.py", line 281, in optimize
+    self.backward_generator()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v8.py", line 273, in backward_generator
+    loss.backward()
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/tensor.py", line 198, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/autograd/__init__.py", line 100, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+KeyboardInterrupt
+wandb: Waiting for W&B process to finish, PID 13259
+wandb: Run summary:
+wandb:   _timestamp 1588860829.3720994
+wandb:     _runtime 605.2470693588257
+wandb:        _step 3848
+wandb: Syncing files in wandb/run-20200507_140344-90m4zgv9:
+wandb:   code/train.py
+wandb: plus 7 W&B file(s) and 13 media file(s)
+wandb: - 4.73MB of 4.73MB uploadedwandb: \ 4.73MB of 4.73MB uploadedwandb: | 4.73MB of 4.73MB uploadedwandb: / 4.73MB of 4.73MB uploadedwandb: - 4.73MB of 4.73MB uploadedwandb: \ 4.73MB of 4.73MB uploadedwandb: | 4.73MB of 4.73MB uploadedwandb: / 4.73MB of 4.73MB uploadedwandb:                                                                                
+wandb: Synced avid-water-331: https://app.wandb.ai/ponku/image-synthesis/runs/90m4zgv9
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200507_141723-135orqp2
+wandb: Syncing run fine-flower-332
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/135orqp2
+wandb: Run `wandb off` to turn off syncing.
+
+wandb: Ctrl-c pressed.
+wandb: Program failed with code 255. Press ctrl-c to abort syncing.
+/tmp/pycharm_project_809/src/networks/base_model.py:72: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(m.bias.data, 0.0)
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    model.optimize()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v8.py", line 281, in optimize
+    nn.utils.clip_grad_norm_(self.generator.parameters(), max_norm=100.)
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v8.py", line 273, in backward_generator
+    loss.backward()
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/tensor.py", line 198, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/autograd/__init__.py", line 100, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+KeyboardInterrupt
+
+wandb: Waiting for W&B process to finish, PID 26835
+wandb: Run summary:
+wandb:        _step 4808
+wandb:     _runtime 756.5813822746277
+wandb:   _timestamp 1588861799.5321252
+wandb: Syncing files in wandb/run-20200507_141723-135orqp2:
+wandb:   code/train.py
+wandb: plus 7 W&B file(s) and 16 media file(s)
+wandb: - 6.19MB of 6.59MB uploadedwandb: \ 6.59MB of 6.59MB uploadedwandb: | 6.59MB of 6.59MB uploadedwandb: / 6.59MB of 6.59MB uploadedwandb: - 6.59MB of 6.59MB uploadedwandb: \ 6.59MB of 6.59MB uploadedwandb: | 6.59MB of 6.59MB uploadedwandb: / 6.59MB of 6.59MB uploadedwandb:                                                                                
+wandb: Synced fine-flower-332: https://app.wandb.ai/ponku/image-synthesis/runs/135orqp2
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200507_143041-1l0jkmk8
+wandb: Syncing run avid-butterfly-333
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/1l0jkmk8
+wandb: Run `wandb off` to turn off syncing.
+
+/tmp/pycharm_project_809/src/networks/base_model.py:72: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(m.bias.data, 0.0)
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200507_175952-bel4wtww
+wandb: Syncing run warm-shape-334
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/bel4wtww
+wandb: Run `wandb off` to turn off syncing.
+
+/tmp/pycharm_project_809/src/networks/base_model.py:72: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(m.bias.data, 0.0)
+
+wandb: Waiting for W&B process to finish, PID 33498
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    model.optimize()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v8.py", line 290, in optimize
+    self.backward_discriminator()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v8.py", line 226, in backward_discriminator
+    loss.backward()
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/tensor.py", line 198, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/autograd/__init__.py", line 100, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+RuntimeError: Trying to backward through the graph a second time, but the buffers have already been freed. Specify retain_graph=True when calling backward the first time.
+wandb: Program failed with code 1. Press ctrl-c to abort syncing.
+wandb: Process crashed early, not syncing files
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200507_180051-y2yz034s
+wandb: Syncing run stilted-thunder-335
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/y2yz034s
+wandb: Run `wandb off` to turn off syncing.
+
+/tmp/pycharm_project_809/src/networks/base_model.py:72: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  init.constant(m.bias.data, 0.0)
+wandb: ERROR Error while calling W&B API: Error 1040: Too many connections (<Response [500]>)
+wandb: Network error (HTTPError), entering retry loop. See /tmp/pycharm_project_809/wandb/debug.log for full traceback.
+wandb: Network error (HTTPError), entering retry loop. See /tmp/pycharm_project_809/wandb/debug.log for full traceback.
+wandb: ERROR Error while calling W&B API: Error 1040: Too many connections (<Response [500]>)
+wandb: Network error resolved after 0:00:28.960209, resuming normal operation.
+wandb: Network error resolved after 0:00:18.824472, resuming normal operation.
+wandb: Network error resolved after 0:00:49.429500, resuming normal operation.
+wandb: Network error resolved after 0:01:04.675291, resuming normal operation.
+
+wandb: Waiting for W&B process to finish, PID 38846
+wandb: Program ended successfully.
+wandb: Run summary:
+wandb:        _step 589336
+wandb:   _timestamp 1588953746.5505075
+wandb:     _runtime 91905.65847826004
+wandb: Syncing files in wandb/run-20200507_143041-1l0jkmk8:
+wandb:   code/train.py
+wandb: plus 7 W&B file(s) and 1850 media file(s)
+wandb: - 487.09MB of 487.09MB uploadedwandb: \ 487.09MB of 487.09MB uploadedwandb: | 487.09MB of 487.09MB uploadedwandb: / 487.09MB of 487.09MB uploadedwandb: - 487.09MB of 487.09MB uploadedwandb: \ 487.09MB of 487.09MB uploadedwandb: | 487.09MB of 487.09MB uploadedwandb:                                                                                
+wandb: Synced avid-butterfly-333: https://app.wandb.ai/ponku/image-synthesis/runs/1l0jkmk8
+
+wandb: Waiting for W&B process to finish, PID 34464
+wandb: Program ended successfully.
+wandb: Run summary:
+wandb:     _runtime 89514.0356824398
+wandb:   _timestamp 1588963965.1215227
+wandb:        _step 589336
+wandb: Syncing files in wandb/run-20200507_180051-y2yz034s:
+wandb:   code/train.py
+wandb: plus 7 W&B file(s) and 1850 media file(s)
+wandb: - 483.42MB of 483.42MB uploadedwandb: \ 483.42MB of 483.42MB uploadedwandb: | 483.42MB of 483.42MB uploadedwandb: / 483.42MB of 483.42MB uploadedwandb: - 483.42MB of 483.42MB uploadedwandb: \ 483.42MB of 483.42MB uploadedwandb: | 483.42MB of 483.42MB uploadedwandb:                                                                                
+wandb: Synced stilted-thunder-335: https://app.wandb.ai/ponku/image-synthesis/runs/y2yz034s
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200511_130359-1k516aa8
+wandb: Syncing run dry-sun-377
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/1k516aa8
+wandb: Run `wandb off` to turn off syncing.
+
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    model.optimize()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 309, in optimize
+    self.backward_discriminator()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 212, in backward_discriminator
+    self.similarity.requires_grad_(False)
+RuntimeError: you can only change requires_grad flags of leaf variables. If you want to use a computed variable in a subgraph that doesn't require differentiation use var_no_grad = var.detach().
+
+wandb: Waiting for W&B process to finish, PID 29412
+wandb: Program failed with code 1. Press ctrl-c to abort syncing.
+wandb: Process crashed early, not syncing files
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200511_130830-z8xr1wdz
+wandb: Syncing run fearless-sun-378
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/z8xr1wdz
+wandb: Run `wandb off` to turn off syncing.
+
+wandb: Ctrl-c pressed.
+wandb: Program failed with code 255. Press ctrl-c to abort syncing.
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    model.optimize()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 308, in optimize
+    self.backward_discriminator()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 217, in backward_discriminator
+    scores_fake_c = self.discriminators[scale](self.fake_images[scale].detach(), code=self.style_feat)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/networks/discriminator_v6.py", line 162, in forward
+    return features
+  File "/tmp/pycharm_project_809/src/networks/discriminator_v6.py", line 158, in forward_features
+    return c_predicts
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/aimas/miniconda3
+wandb: Waiting for W&B process to finish, PID 32329
+/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/container.py", line 100, in forward
+    input = module(input)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/networks/discriminator_v6.py", line 28, in forward
+    x = self.norm(x)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/batchnorm.py", line 106, in forward
+    exponential_average_factor, self.eps)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/functional.py", line 1923, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+KeyboardInterrupt
+wandb: Sending ctrl-c to W&B process, PID 32329. Press ctrl-c again to kill it.
+wandb: Killing W&B process, PID 32329
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200511_131610-3ncggwwd
+wandb: Syncing run confused-resonance-379
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/3ncggwwd
+wandb: Run `wandb off` to turn off syncing.
+
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    model.optimize()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 308, in optimize
+    self.backward_discriminator()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 234, in backward_discriminator
+    loss.backward()
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/tensor.py", line 198, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/autograd/__init__.py", line 100, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+RuntimeError: cuDNN error: CUDNN_STATUS_EXECUTION_FAILED (_cudnn_rnn_backward_input at /opt/conda/conda-bld/pytorch_1587428398394/work/aten/src/ATen/native/cudnn/RNN.cpp:931)
+frame #0: c10::Error::Error(c10::SourceLocation, std::string const&) + 0x4e (0x7fbed4c20b5e in /home/aimas/miniconda3/envs/nemo-ponk/lib/pyt
+wandb: Waiting for W&B process to finish, PID 37425
+hon3.7/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xd9f507 (0x7fbed5bec507 in /home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: at::native::_cudnn_rnn_backward(at::Tensor const&, c10::ArrayRef<at::Tensor>, long, at::Tensor const&, at::Tensor const&, at::Tensor const&, at::Tensor const&, at::Tensor const&, at::Tensor const&, at::Tensor const&, long, long, long, bool, double, bool, bool, c10::ArrayRef<long>, at::Tensor const&, at::Tensor const&, std::array<bool, 4ul>) + 0x1a9 (0x7fbed5bee819 in /home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0xe245ad (0x7fbed5c715ad in /home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xe25d43 (0x7fbed5c72d43 in /home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: <unknown function> + 0x2866a60 (0x7fbefe668a60 in /home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: <unknown function> + 0x28d9eb3 (0x7fbefe6dbeb3 in /home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: torch::autograd::generated::CudnnRnnBackward::apply(std::vector<at::Tensor, std::allocator<at::Tensor> >&&) + 0x708 (0x7fbefe41d338 in /home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: <unknown function> + 0x2ae8215 (0x7fbefe8ea215 in /home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: torch::autograd::Engine::evaluate_function(std::shared_ptr<torch::autograd::GraphTask>&, torch::autograd::Node*, torch::autograd::InputBuffer&) + 0x16f3 (0x7fbefe8e7513 in /home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #10: torch::autograd::Engine::thread_main(std::shared_ptr<torch::autograd::GraphTask> const&, bool) + 0x3d2 (0x7fbefe8e82f2 in /home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #11: torch::autograd::Engine::thread_init(int) + 0x39 (0x7fbefe8e0969 in /home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: torch::autograd::python::PythonEngine::thread_init(int) + 0x38 (0x7fbf01c27558 in /home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/lib/libtorch_python.so)
+frame #13: <unknown function> + 0xc819d (0x7fbf0468a19d in /home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/lib/../../../.././libstdc++.so.6)
+frame #14: <unknown function> + 0x76db (0x7fbf1d53a6db in /lib/x86_64-linux-gnu/libpthread.so.0)
+frame #15: clone + 0x3f (0x7fbf1d26388f in /lib/x86_64-linux-gnu/libc.so.6)
+
+wandb: Program failed with code 1. Press ctrl-c to abort syncing.
+wandb: Process crashed early, not syncing files
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200511_131706-1eko9ie4
+wandb: Syncing run comic-night-380
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/1eko9ie4
+wandb: Run `wandb off` to turn off syncing.
+
+
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    model.optimize()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 297, in optimize
+    self.forward_generator()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 251, in forward_generator
+    images = self.generator(self.style_feat.to(self.device_map['img']).detach(), self.content_feat.to(self.device_map['img']))
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/networks/generators_v8.py", line 234, in forward
+    feats = _layer(feats, input_style)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/networks/generators_v8.py", line 148, in forward
+    feat = self._style_1(style, fewandb: Waiting for W&B process to finish, PID 38082
+at)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/networks/generators_v8.py", line 19, in forward
+    s_mean = self.mean_layer(features)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/layers/basic.py", line 265, in forward
+    return F.linear(x, weight, bias)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/functional.py", line 1610, in linear
+    ret = torch.addmm(bias, input, weight.t())
+RuntimeError: size mismatch, m1: [8 x 1024], m2: [512 x 1024] at /opt/conda/conda-bld/pytorch_1587428398394/work/aten/src/THC/generic/THCTensorMathBlas.cu:283
+wandb: Program failed with code 1. Press ctrl-c to abort syncing.
+wandb: Process crashed early, not syncing files
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200511_131844-289ne0ud
+wandb: Syncing run ancient-star-381
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/289ne0ud
+wandb: Run `wandb off` to turn off syncing.
+
+
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    model.optimize()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 297, in optimize
+    self.forward_generator()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 251, in forward_generator
+    images = self.generator(self.style_feat.to(self.device_map['img']).detach(), self.content_feat.to(self.device_map['img']))
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/networks/generators_v8.py", line 234, in forward
+    feats = _layer(feats, input_style)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/networks/generators_v8.py", line 148, in forward
+    feat = self._style_1(style, fewandb: Waiting for W&B process to finish, PID 39163
+at)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/networks/generators_v8.py", line 19, in forward
+    s_mean = self.mean_layer(features)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/layers/basic.py", line 265, in forward
+    return F.linear(x, weight, bias)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/functional.py", line 1610, in linear
+    ret = torch.addmm(bias, input, weight.t())
+RuntimeError: size mismatch, m1: [8 x 1024], m2: [512 x 1024] at /opt/conda/conda-bld/pytorch_1587428398394/work/aten/src/THC/generic/THCTensorMathBlas.cu:283
+wandb: Program failed with code 1. Press ctrl-c to abort syncing.
+wandb: Process crashed early, not syncing files
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200511_132210-2aze4fiu
+wandb: Syncing run curious-glitter-382
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/2aze4fiu
+wandb: Run `wandb off` to turn off syncing.
+
+
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    model.optimize()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 297, in optimize
+    self.forward_generator()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 251, in forward_generator
+    images = self.generator(self.style_feat.to(self.device_map['img']).detach(), self.content_feat.to(self.device_map['img']))
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/networks/generators_v8.py", line 234, in forward
+    feats = _layer(feats, input_style)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/networks/generators_v8.py", line 146, in forward
+    feat = self._conv_1(feat, add_wandb: Waiting for W&B process to finish, PID 774
+bias=False)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/layers/basic.py", line 298, in forward
+    return F.conv2d(x, weight, None, stride=self.stride, dilation=self.dilation)
+RuntimeError: Given groups=1, weight of size [512, 512, 3, 3], expected input[8, 1024, 10, 10] to have 512 channels, but got 1024 channels instead
+wandb: Program failed with code 1. Press ctrl-c to abort syncing.
+wandb: Process crashed early, not syncing files
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200511_132943-157mns7f
+wandb: Syncing run still-violet-383
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/157mns7f
+wandb: Run `wandb off` to turn off syncing.
+
+
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    model.optimize()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 297, in optimize
+    self.forward_generator()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 251, in forward_generator
+    images = self.generator(self.style_feat.to(self.device_map['img']).detach(), self.content_feat.to(self.device_map['img']))
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/networks/generators_v8.py", line 234, in forward
+    feats = _layer(feats, input_style)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/networks/generators_v8.py", line 148, in forward
+    feat = self._style_1(style, fewandb: Waiting for W&B process to finish, PID 6351
+at)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/networks/generators_v8.py", line 19, in forward
+    s_mean = self.mean_layer(features)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/layers/basic.py", line 265, in forward
+    return F.linear(x, weight, bias)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/functional.py", line 1610, in linear
+    ret = torch.addmm(bias, input, weight.t())
+RuntimeError: size mismatch, m1: [8 x 1024], m2: [512 x 512] at /opt/conda/conda-bld/pytorch_1587428398394/work/aten/src/THC/generic/THCTensorMathBlas.cu:283
+wandb: Program failed with code 1. Press ctrl-c to abort syncing.
+wandb: Process crashed early, not syncing files
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200511_133159-t8lgv0dz
+wandb: Syncing run floral-firebrand-384
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/t8lgv0dz
+wandb: Run `wandb off` to turn off syncing.
+
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200511_133438-qxkgh2ib
+wandb: Syncing run daily-sun-385
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/qxkgh2ib
+wandb: Run `wandb off` to turn off syncing.
+
+wandb: Ctrl-c pressed.
+wandb: Program failed with code 255. Press ctrl-c to abort syncing.
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    model.optimize()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 298, in optimize
+    self.backward_generator()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 274, in backward_generator
+    pred_c = self.discriminators[scale](self.fake_images[scale], code=self.style_feat.detach())
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/networks/discriminator_v6.py", line 165, in forward
+    feats =  self.forward_features(x)
+  File "/tmp/pycharm_project_809/src/networks/discriminator_v6.py", line 161, in forward_features
+    features = self.feature_extractor(x)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "
+wandb: Waiting for W&B process to finish, PID 9695
+/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/container.py", line 100, in forward
+    input = module(input)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/networks/discriminator_v6.py", line 28, in forward
+    x = self.norm(x)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/batchnorm.py", line 97, in forward
+    self.num_batches_tracked = self.num_batches_tracked + 1
+KeyboardInterrupt
+wandb: Sending ctrl-c to W&B process, PID 9695. Press ctrl-c again to kill it.
+wandb: Killing W&B process, PID 9695
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200511_133542-3e538eda
+wandb: Syncing run silver-sun-386
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/3e538eda
+wandb: Run `wandb off` to turn off syncing.
+
+wandb: Ctrl-c pressed.
+wandb: Program failed with code 255. Press ctrl-c to abort syncing.
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    model.optimize()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 298, in optimize
+    self.backward_generator()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 291, in backward_generator
+    loss.backward()
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/tensor.py", line 198, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/autograd/__init__.py", line 100, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+KeyboardInterrupt
+
+wandb: Waiting for W&B process to finish, PID 7979
+wandb: Run summary:
+wandb:   _timestamp 1589204699.4649475
+wandb:        _step 4488
+wandb:     _runtime 780.2372136116028
+wandb: Syncing files in wandb/run-20200511_133159-t8lgv0dz:
+wandb:   code/train.py
+wandb: plus 7 W&B file(s) and 15 media file(s)
+wandb: - 3.41MB of 3.41MB uploadedwandb: \ 3.41MB of 3.41MB uploadedwandb: | 3.41MB of 3.41MB uploadedwandb: / 3.41MB of 3.41MB uploadedwandb: - 3.41MB of 3.41MB uploadedwandb: \ 3.41MB of 3.41MB uploadedwandb: | 3.41MB of 3.41MB uploadedwandb: / 3.41MB of 3.41MB uploadedwandb:                                                                                
+wandb: Synced floral-firebrand-384: https://app.wandb.ai/ponku/image-synthesis/runs/t8lgv0dz
+wandb: Ctrl-c pressed.
+wandb: Program failed with code 255. Press ctrl-c to abort syncing.
+/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/functional.py:2973: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode))
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    model.optimize()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 298, in optimize
+    self.backward_generator()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 291, in backward_generator
+    loss.backward()
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/tensor.py", line 198, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/autograd/__init__.py", line 100, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+KeyboardInterrupt
+
+wandb: Waiting for W&B process to finish, PID 10443
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Run summary:
+wandb:        _step 3848
+wandb:   _timestamp 1589204822.9217176
+wandb:     _runtime 680.8772509098053
+wandb: Syncing files in wandb/run-20200511_133542-3e538eda:
+wandb:   code/train.py
+wandb: plus 7 W&B file(s) and 13 media file(s)
+wandb: - 2.61MB of 2.61MB uploadedwandb: \ 2.61MB of 2.61MB uploadedwandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200511_134719-1we71rnj
+wandb: | 2.61MB of 2.61MB uploadedwandb: Syncing run generous-lion-387
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/1we71rnj
+wandb: Run `wandb off` to turn off syncing.
+
+wandb: / 2.61MB of 2.61MB uploadedwandb: - 2.61MB of 2.61MB uploadedwandb: \ 2.61MB of 2.61MB uploadedwandb: | 2.61MB of 2.61MB uploadedwandb:                                                                                
+wandb: Synced silver-sun-386: https://app.wandb.ai/ponku/image-synthesis/runs/3e538eda
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200511_134729-391lzweb
+wandb: Syncing run northern-durian-388
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/391lzweb
+wandb: Run `wandb off` to turn off syncing.
+
+
+wandb: Waiting for W&B process to finish, PID 18366
+Traceback (most recent call last):
+  File "train.py", line 16, in <module>
+    model = StackTrainer(cfg)
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 157, in __init__
+    self.discriminators = nn.ModuleDict(self.discriminators).to(self.device_map['img'])
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 443, in to
+    return self._apply(convert)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 203, in _apply
+    module._apply(fn)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 203, in _apply
+    module._apply(fn)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 203, in _apply
+    module._apply(fn)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 225, in _apply
+    param_applied = fn(param)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 441, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA out of memory. Tried to allocate 16.00 MiB (GPU 1; 31.72 GiB total capacity; 261.53 MiB already allocated; 13.88 MiB free; 284.00 MiB reserved in total by PyTorch)
+wandb: Program failed with code 1. Press ctrl-c to abort syncing.
+wandb: Process crashed early, not syncing files
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200511_134900-3omod8r5
+wandb: Syncing run cerulean-leaf-389
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/3omod8r5
+wandb: Run `wandb off` to turn off syncing.
+
+wandb: Ctrl-c pressed.
+wandb: Program failed with code 255. Press ctrl-c to abort syncing.
+/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/functional.py:2973: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode))
+
+wandb: Waiting for W&B process to finish, PID 18175
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    model.optimize()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 298, in optimize
+    def optimize(self):
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 291, in backward_generator
+    self.consistency_criterion(list(self.interp_images_o.values())) * self.cfg.lambda_clr + \
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/tensor.py", line 198, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/autograd/__init__.py", line 100, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+KeyboardInterrupt
+wandb: Run summary:
+wandb:   _timestamp 1589205758.9349382
+wandb:        _step 5128
+wandb:     _runtime 920.0163953304291
+wandb: Syncing files in wandb/run-20200511_134719-1we71rnj:
+wandb:   code/train.py
+wandb: plus 7 W&B file(s) and 17 media file(s)
+wandb: - 3.46MB of 3.46MB uploadedwandb: \ 3.46MB of 3.46MB uploadedwandb: | 3.46MB of 3.46MB uploadedwandb: / 3.46MB of 3.46MB uploadedwandb: - 3.46MB of 3.46MB uploadedwandb: \ 3.46MB of 3.46MB uploadedwandb: | 3.46MB of 3.46MB uploadedwandb:                                                                                
+wandb: Synced generous-lion-387: https://app.wandb.ai/ponku/image-synthesis/runs/1we71rnj
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200511_140519-106c0fh4
+wandb: Syncing run quiet-mountain-390
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/106c0fh4
+wandb: Run `wandb off` to turn off syncing.
+
+/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/functional.py:2973: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode))
+Traceback (most recent call last):
+  File "train.py", line 26, in <module>
+    model.optimize()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 303, in optimize
+    self.backward_generator()
+  File "/tmp/pycharm_project_809/src/trainers/stack_trainer_v9.py", line 279, in backward_generator
+    pred_cim = self.discriminators[scale](self.interp_images_m[scale], code=self.interp_scontent.detach())
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/networks/discriminator_v6.py", line 165, in forward
+    feats =  self.forward_features(x)
+  File "/tmp/pycharm_project_809/src/networks/discriminator_v6.py", line 161, in forward_features
+    features = self.feature_extractor(x)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwarg
+wandb: Waiting for W&B process to finish, PID 30710
+s)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/container.py", line 100, in forward
+    input = module(input)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/networks/discriminator_v6.py", line 26, in forward
+    x = self.conv(x) # maybe should do the bias thingy
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/pycharm_project_809/src/layers/basic.py", line 296, in forward
+    return F.conv2d(x, weight, bias, stride=self.stride, dilation=self.dilation)
+RuntimeError: CUDA out of memory. Tried to allocate 16.00 MiB (GPU 1; 31.72 GiB total capacity; 30.69 GiB already allocated; 6.88 MiB free; 30.73 GiB reserved in total by PyTorch)
+wandb: Program failed with code 1. Press ctrl-c to abort syncing.
+wandb: Process crashed early, not syncing files
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200511_140624-x689o2y6
+wandb: Syncing run amber-dream-391
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/x689o2y6
+wandb: Run `wandb off` to turn off syncing.
+
+wandb: Ctrl-c pressed.
+wandb: Program failed with code 255. Press ctrl-c to abort syncing.
+Traceback (most recent call last):
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/wandb/internal_cli.py", line 106, in <module>
+    main()
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/wandb/internal_cli.py", line 98, in main
+    headless(args)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/wandb/internal_cli.py", line 52, in headless
+    user_process_pid, stdout_master_fd, stderr_master_fd)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/wandb/run_manager.py", line 1167, in wrap_existing_process
+    self._sync_etc(headless=True)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/wandb/run_manager.py", line 1382, in _sync_etc
+    self.shutdown(exitcode)
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/wandb/run_manager.py", line 1071, in shutdown
+    self._system_stats.shutdown()
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/wandb/stats.py", line 112, in shutdown
+    self._thread.join()
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/threading.py", line 1044, in join
+    self._wait_for_tstate_lock()
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/threading.py", line 1060, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Exception ignored in: <module 'threading' from '/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/threading.py'>
+Traceback (most recent call last):
+  File "/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/threading.py", line 1307, in _shutdown
+    lock.acquire()
+KeyboardInterrupt
+train.py:11: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(f)
+wandb: Tracking run with wandb version 0.8.34
+wandb: Wandb version 0.8.35 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20200511_140655-tbuvr00r
+wandb: Syncing run decent-feather-392
+wandb: ⭐️ View project at https://app.wandb.ai/ponku/image-synthesis
+wandb: 🚀 View run at https://app.wandb.ai/ponku/image-synthesis/runs/tbuvr00r
+wandb: Run `wandb off` to turn off syncing.
+
+/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/functional.py:2973: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode))
+/home/aimas/miniconda3/envs/nemo-ponk/lib/python3.7/site-packages/torch/nn/functional.py:2973: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode))
+wandb: Network error (HTTPError), entering retry loop. See /tmp/pycharm_project_809/wandb/debug.log for full traceback.
+wandb: Network error (ReadTimeout), entering retry loop. See /tmp/pycharm_project_809/wandb/debug.log for full traceback.
+wandb: Network error (HTTPError), entering retry loop. See /tmp/pycharm_project_809/wandb/debug.log for full traceback.
+wandb: Network error (HTTPError), entering retry loop. See /tmp/pycharm_project_809/wandb/debug.log for full traceback.
+wandb: Network error (HTTPError), entering retry loop. See /tmp/pycharm_project_809/wandb/debug.log for full traceback.
+wandb: Network error resolved after 0:00:47.798868, resuming normal operation.
+wandb: Network error resolved after 0:00:08.994197, resuming normal operation.
+wandb: Network error resolved after 0:00:03.987354, resuming normal operation.
+wandb: Network error resolved after 0:00:34.318878, resuming normal operation.
+wandb: Program ended successfully.
+wandb: Run summary:
+wandb:     _runtime 67242.6043484211
+wandb:   _timestamp 1589273257.4036632
+wandb:        _step 357763
+wandb: Syncing files in wandb/run-20200511_140655-tbuvr00r:
+wandb:   code/train.py
+wandb: plus 7 W&B file(s) and 1245 media file(s)
+wandb: - 218.19MB of 218.19MB uploadedwandb: \ 218.19MB of 218.19MB uploadedwandb: | 218.19MB of 218.19MB uploadedwandb: / 218.19MB of 218.19MB uploadedwandb: - 218.19MB of 218.19MB uploadedwandb: \ 218.19MB of 218.19MB uploadedwandb:                                                                                
+wandb: Synced decent-feather-392: https://app.wandb.ai/ponku/image-synthesis/runs/tbuvr00r
+wandb: Program ended successfully.
+wandb: Run summary:
+wandb:   _timestamp 1589287879.3998764
+wandb:        _step 456104
+wandb:     _runtime 82939.23374056816
+wandb: Syncing files in wandb/run-20200511_134900-3omod8r5:
+wandb:   code/train.py
+wandb: plus 7 W&B file(s) and 1432 media file(s)
+wandb: - 238.16MB of 238.16MB uploadedwandb: \ 238.16MB of 238.16MB uploadedwandb: | 238.16MB of 238.16MB uploadedwandb: / 238.16MB of 238.16MB uploadedwandb: - 238.16MB of 238.16MB uploadedwandb: \ 238.16MB of 238.16MB uploadedwandb: | 238.16MB of 238.16MB uploadedwandb:                                                                                
+wandb: Synced cerulean-leaf-389: https://app.wandb.ai/ponku/image-synthesis/runs/3omod8r5

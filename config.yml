@@ -1,0 +1,99 @@
+model_type: stack_cycle_gan
+upsample_type: transpose # or upsample
+checkpoint_dir: model_checkpoints
+
+loss_display_freq: 4
+grad_display_freq: 4
+visual_display_freq: 4
+save_iter_freq: 18000
+
+device_ids:
+  - 0
+
+# img size params
+batch_size: 4
+load_size: 256
+
+# text size params
+rnn_hidden_dim: 512
+rnn_num_layers: 4
+embedding_size: 256
+
+# init params
+gen_init: kaiming
+gen_gain: 0.02
+dsc_init: kaiming
+dsc_gain: 0.02
+lmf_init: kaiming
+lmf_gain: 0.02
+
+lang_lr: 0.002
+lang_betas:
+  - 0.9
+  - 0.999
+lang_wd: 0.00
+
+
+# TTUR by default
+gen_lr: 0.004
+dsc_lr: 0.008
+lmf_lr: 0.004
+
+dsc_betas:
+  - 0.5
+  - 0.98
+
+gen_betas:
+  - 0.5
+  - 0.98
+
+lmf_betas:
+  - 0.5
+  - 0.98
+
+gen_wd: 0.00
+dsc_wd: 0.00
+lmf_wd: 0.00
+
+gen_spectral: False
+dsc_spectral: False
+
+num_epochs: 50
+
+lambda_cvar: 5
+lambda_cmean: 1
+lambda_clr: 1
+lambda_kld: 0.05
+lambda_gamma: 10
+
+
+lambda_match: 50
+lambda_uncond: 20
+lambda_interp: 40
+
+real_label: 1.
+fake_label: -1.
+smooth: 0.1
+
+pool_real_size: 20
+pool_fake_size: 5
+pool_prob: 0.7
+
+proj_lang: True
+
+vae_act: leaky_relu
+latent_dim: 512
+ngf: 64
+ndf: 64
+
+num_dsc: 3
+patch_k: 1
+critic_iter: 1
+
+style_layers: 8
+style_dim: 512
+style_bias: True
+style_lr_mul: 1.
+
+weight_scaling: False
+color_custom_lr: 0.1
